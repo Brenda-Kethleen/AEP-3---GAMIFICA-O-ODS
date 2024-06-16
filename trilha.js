@@ -1,6 +1,3 @@
-// script.js
-
-// Mostrar a primeira fase ao carregar a página
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('step-1').style.display = 'block';
 });
@@ -17,6 +14,15 @@ function prevStep(step) {
         stepElement.style.display = 'none';
     });
     document.getElementById('step-' + step).style.display = 'block';
+}
+
+function checkAnswer(step, correctAnswer) {
+    const userAnswer = document.getElementById('answer-' + step).value.trim();
+    if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+        nextStep(step + 1);
+    } else {
+        alert('Resposta incorreta. Tente novamente.');
+    }
 }
 
 function finish() {

@@ -1,14 +1,16 @@
-/* styles.css */
+/* trilha2.css */
 
+/* Estilos para a nav-bar */
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #B0CBC2;
+    background-color: #d8dcff;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 .knowledge-path {
@@ -19,6 +21,8 @@ body {
     max-width: 600px;
     width: 100%;
     text-align: center;
+    margin-left: auto; /* Define a margem esquerda para "auto" */
+    margin-right: auto; /* Mantém a margem direita automática */
 }
 
 .knowledge-path h1 {
@@ -27,23 +31,23 @@ body {
 
 .path-list .step {
     display: none;
-    background: #e0f7fa;
+    background: #d8dcff;
     padding: 15px;
-    border-left: 6px solid #00bfa5;
+    border-left: 6px solid #a4a9da;
     border-radius: 4px;
     margin-bottom: 20px;
 }
 
 .path-list .step h2 {
-    color: #00796b;
+    color: #000000;
 }
 
 .path-list .step p {
-    color: #004d40;
+    color: #001b4d;
 }
 
 button {
-    background-color: #00796b;
+    background-color: #275ccf;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -52,5 +56,5 @@ button {
 }
 
 button:hover {
-    background-color: #004d40;
+    background-color: #0e044e;
 }

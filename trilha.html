@@ -1,91 +1,84 @@
 <html>
 <head>
-  <!--titúlo da página(fica na aba)-->
   <title>Trilha de ensino - CODE TRAIL</title>
-
   <meta charset="utf-8">
-
-  <!--Ela deixa o nosso bootstrap responsivo-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!--Essa tag vai trazer alguns efeitos de css no bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  
-  <!--Essa tag vai trazer efeitos visuais com ajax-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  
-  <!--Essa tag também possui o ajax, só que possuí também Javascript-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  
-  <!--Aqui é Javascript-->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
   <link rel="stylesheet" href="trilha.css">
-  
 </head>
-
 <body>
-
-     <!--Navbar-->
-<div id="voltaraotopo">
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <!--lista desordenada-->
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <!--Adicionar link-->
           <a class="nav-link" href="trabalho_livre.html">Página inicial</a>
         </li>
       </ul>
-    </nav>
     </div>
+  </nav>
+  
+  <br>
+  <div class="knowledge-path">
+    <h1>Trilha de Ensino - CODE TRAIL</h1>
     <br>
-    <div class="knowledge-path">
-        <h1>Trilha de Ensino - CODE TRAIL</h1>
-        <div class="path-list">
-            <div class="step" id="step-1">
-                <h2>Fase 1: HTML e CSS</h2>
-                <p>Aprenda as bases da criação de páginas web com HTML e CSS.</p>
-                <button onclick="nextStep(2)">Próxima Fase</button>
-            </div>
-            <div class="step" id="step-2" style="display: none;">
-                <h2>Fase 2: JavaScript Básico</h2>
-                <p>Entenda a linguagem de programação JavaScript e como ela é usada para adicionar interatividade às páginas web.</p>
-                <button onclick="prevStep(1)">Fase Anterior</button>
-                <button onclick="nextStep(3)">Próxima Fase</button>
-            </div>
-            <div class="step" id="step-3" style="display: none;">
-                <h2>Fase 3: Git e Controle de Versão</h2>
-                <p>Aprenda a usar Git e GitHub para gerenciar o código fonte e colaborar com outros desenvolvedores.</p>
-                <button onclick="prevStep(2)">Fase Anterior</button>
-                <button onclick="nextStep(4)">Próxima Fase</button>
-            </div>
-            <div class="step" id="step-4" style="display: none;">
-                <h2>Fase 4: Desenvolvimento Back-end com Node.js</h2>
-                <p>Explore o desenvolvimento de servidores e APIs com Node.js.</p>
-                <button onclick="prevStep(3)">Fase Anterior</button>
-                <button onclick="nextStep(5)">Próxima Fase</button>
-            </div>
-            <div class="step" id="step-5" style="display: none;">
-                <h2>Fase 5: Banco de Dados Relacionais</h2>
-                <p>Aprenda a usar bancos de dados relacionais como MySQL ou PostgreSQL para armazenar e gerenciar dados.</p>
-                <button onclick="prevStep(4)">Fase Anterior</button>
-                <button onclick="nextStep(6)">Próxima Fase</button>
-            </div>
-            <div class="step" id="step-6" style="display: none;">
-                <h2>Fase 6: Frameworks Front-end</h2>
-                <p>Descubra frameworks JavaScript populares como React, Angular ou Vue para construir interfaces de usuário complexas.</p>
-                <button onclick="prevStep(5)">Fase Anterior</button>
-                <button onclick="nextStep(7)">Próxima Fase</button>
-            </div>
-            <div class="step" id="step-7" style="display: none;">
-                <h2>Fase 7: DevOps e Deployment</h2>
-                <p>Entenda como configurar ambientes de produção e automatizar o deployment de aplicações.</p>
-                <button onclick="prevStep(6)">Fase Anterior</button>
-                <button onclick="finish()">Finalizar Trilha</button>
-            </div>
-        </div>
+    <div class="path-list">
+      <div class="step" id="step-1">
+        <h2>Fase 1: HTML e CSS</h2>
+        <p>Aprenda as bases da criação de páginas web com HTML e CSS.</p>
+        <p>Qual é a tag HTML para um título principal?</p>
+        <input type="text" id="answer-1" class="form-control"></br>
+        <button onclick="checkAnswer(1, 'H1')">Próxima</button>
+      </div>
+      <div class="step" id="step-2" style="display: none;">
+        <h2>Fase 1: HTML e CSS</h2>
+        <p>Qual é o atributo HTML para vincular um estilo externo?</p>
+        <input type="text" id="answer-2" class="form-control"></br>
+        <button onclick="prevStep(1)">Anterior</button>
+        <button onclick="checkAnswer(2, 'Href')">Próxima</button>
+      </div>
+      <div class="step" id="step-3" style="display: none;">
+        <h2>Fase 1: HTML e CSS</h2>
+        <p>Qual é o tag HTML para um parágrafo?</p>
+        <input type="text" id="answer-3" class="form-control"></br>
+        <button onclick="prevStep(2)">Anterior</button>
+        <button onclick="checkAnswer(3, 'P')">Próxima</button>
+      </div>
+      <div class="step" id="step-4" style="display: none;">
+        <h2>Fase 1: HTML e CSS</h2>
+        <p>Qual é a propriedade CSS para o tamanho da fonte?</p>
+        <input type="text" id="answer-4" class="form-control"></br>
+        <button onclick="prevStep(3)">Anterior</button>
+        <button onclick="checkAnswer(4, 'Font-size')">Próxima</button>
+      </div>
+      <div class="step" id="step-5" style="display: none;">
+        <h2>Fase 1: HTML e CSS</h2>
+        <p>Qual é a propriedade CSS para a cor do texto?</p>
+        <input type="text" id="answer-5" class="form-control"></br>
+        <button onclick="prevStep(4)">Anterior</button>
+        <button onclick="checkAnswer(5, 'Color')">Próxima</button>
+      </div>
+      <div class="step" id="step-6" style="display: none;">
+        <h2>Fase 1: HTML e CSS</h2>
+        <p>Qual é a propriedade CSS para a cor de fundo?</p>
+        <input type="text" id="answer-6" class="form-control"></br>
+        <button onclick="prevStep(5)">Anterior</button>
+        <button onclick="checkAnswer(6, 'Background-color')">Próxima</button>
+      </div>
+      <div class="step" id="step-7" style="display: none;">
+        <h2>Fase 1: HTML e CSS</h2>
+        <p>Fase finalizada.</p>
+        <button onclick="prevStep(1)">Refazer Trilha</button>
+        <button onclick="finish()">Finalizar Trilha</button>
+      </div>
     </div>
-
-    <script src="trilha.js"></script>
+  </div>
+  <script src="trilha.js"></script>
 </body>
 </html>
