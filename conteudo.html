@@ -1,0 +1,197 @@
+<!--indicando ao computador que será em html-->
+<html>
+
+<head>
+	<!--para a acentuação-->
+	<meta charset="utf-8">
+	
+	<!--titúlo da página(fica na aba)-->
+	<title>CODE TRAIL</title>
+	
+	<link rel="stylesheet" href="styles.css">
+
+	<!--Ela deixa o nosso bootstrap responsivo-->
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	
+  	<!--Essa tag vai trazer alguns efeitos de css no bootstrap-->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	
+	<!--Essa tag vai trazer efeitos visuais com ajax-->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	
+  	<!--Essa tag também possui o ajax, só que possuí também Javascript-->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	
+  	<!--Aqui é Javascript-->
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<!--CSS-->
+<style>
+	body{
+    /*cor do fundo da tela*/
+     background-color: #d8dcff;
+ }
+
+ /*Deixando a imagem responsiva*/
+  .carousel-inner img {
+    width: 100%;
+    height: 75%;
+  }
+
+  /*Flexbox para organizar dentro dos containers*/
+.flexbox{
+	display: flex;
+
+	 /*Alinha os itens ao centro do container*/
+	 justify-content:center;
+
+	 /*Os itens ficam em linha*/
+	 flex-direction: row;
+}
+
+/*Flexbox para organizar dentro dos containers*/
+.flexbox2{
+	display: flex;
+
+	justify-content: flex-end;
+
+}
+
+</style>
+
+<!--Corpo gráfico do site-->
+<body>
+
+<!--Navbar-->
+	<div id="voltaraotopo">
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  		<!--lista desordenada-->
+  		<ul class="navbar-nav">
+			<li class="nav-item active">
+				<!--Adicionar link-->
+				  <a class="nav-link" href="login.html">Login</a>
+				</li>
+    	<li class="nav-item active">
+    	<!--Adicionar link-->
+      	<a class="nav-link" href="trabalho_livre.html">Página inicial</a>
+    	</li>
+    
+    	<li class="nav-item active">
+    	<!--Adicionar link-->
+      	<a class="nav-link" href="trilha.html">Trilha</a>
+    	</li>
+		<li class="nav-item active">
+			<!--Adicionar link-->
+			  <a class="nav-link" href="C:\Users\User\OneDrive\01 - ENG. DE SOFTWARE 2023-2026\3 E 4 - 2024\3° SEMESTRE\AEP 1 - 3° SEMESTRE\CODE TRAIL\trilha grafica\d.html">Progresso</a>
+		</li>
+
+  		</ul>
+	</nav>
+	</div>
+
+	<!--Jumbotron-->
+	<!--<div> separar o código (regras de estilo)-->
+	<div class="container">
+  	<div class="jumbotron">
+    	<center><h1>Fase 1: HTML e CSS</h1></center>     
+  	</div>     
+	</div>
+
+	
+  	<!--Definir a mudança de conteúdo-->
+  	<hr>
+ 
+	<div class="container">
+	<div id="introdução">
+		<!--Centralizar-->
+  		<center><h2>HTML (HyperText Markup Language)</h2></center>
+        <h3>O que é HTML?</h3>
+  		<p> HTML é a linguagem de marcação usada para criar a estrutura de uma página web. Ele utiliza "tags" para definir 
+            diferentes partes do conteúdo, como títulos, parágrafos, links, imagens e outros elementos.</p>
+  	
+		<h3>Estrutura Básica de um Documento HTML</h3>
+        <img src="estrutura.png">
+		<p>
+			<h6>Explicação das Tags:</h6>
+			!DOCTYPE html: Declara o tipo de documento como HTML5. <br><br>
+            html lang="pt-BR": Inicia o documento HTML e define o idioma como português do Brasil.<br><br>
+            head: Contém metadados, como o título da página e links para CSS.<br><br>
+            meta charset="UTF-8": Define a codificação de caracteres como UTF-8.<br><br>
+            meta name="viewport" content="width=device-width, initial-scale=1.0">: Faz com que a página seja responsiva em dispositivos móveis.<br><br>
+            title: Define o título da página (aparece na aba do navegador).<br><br>
+            body: Contém o conteúdo visível da página.<br><br>
+            h1: Define um título principal.<br><br>
+            p: Define um parágrafo.<br><br>
+            a href="URL": Cria um link<br><br>
+		</p>
+
+
+
+		<p>
+			<center><h2>CSS (Cascading Style Sheets)</h2></center>
+            <h3>O que é CSS?</h3>
+			CSS é a linguagem utilizada para descrever a aparência e a formatação de um documento HTML. 
+            Enquanto o HTML cuida da estrutura e do conteúdo de uma página web, o CSS cuida de como essa 
+            página deve ser apresentada visualmente. Com CSS, você pode definir cores, fontes, espaçamentos, 
+            alinhamentos, e muitos outros aspectos visuais dos elementos HTML.
+
+            <h3>Como Incluir CSS em uma Página HTML</h3>
+			Existem três maneiras principais de adicionar CSS a um documento HTML:<br>
+
+            1- Inline CSS: Adiciona estilos diretamente nos elementos HTML. É útil para estilos rápidos e específicos.
+            <img src="css1.png"><br><br>
+
+            2- Internal CSS: Adiciona estilos dentro da tag -style no cabeçalho -head do documento -HTML. É útil para páginas únicas.<br>
+            <img src="css2.png"><br><br>
+
+            3- External CSS: Linka um arquivo CSS externo ao documento HTML. É a forma mais comum e recomendada para manter o CSS separado do HTML.
+            <img src="css3.png">
+
+            <h3>Sintaxe Básica do CSS</h3>
+            A sintaxe do CSS é composta por seletores e declarações.<br>
+
+            Seletores: Identificam quais elementos HTML serão estilizados.<br>
+            Declarações: Descrevem o estilo que deve ser aplicado aos elementos selecionados. Elas são compostas por propriedades e valores.<br>
+
+            <h4>Exemplo de Sintaxe:</h4>
+            <img src="sintaxe.png"><br>
+
+            Neste exemplo, h1 é o seletor que aponta para todos os elementos h1 na página. As declarações dentro das chaves {} definem o estilo para esses elementos.
+
+            <br><br><br>
+			<h5>Estamos animados para iniciar esta jornada de aprendizado com você. Vamos começar testando os fundamentos de HTML e CSS!</h5>
+            <center>
+            <p>Clique abaixo para realizar a primeira fase:</p>
+			
+				<a href="trilha.html" button type="submit" class="btn btn-primary" >Começar</a></button>
+            </center>
+			
+		</center>
+	<br>
+
+	<h2></h2>
+	
+ 	<!--Definir a mudança de conteúdo-->
+  	<hr>
+
+
+	<br>
+
+	<div class="container">
+	<div class="flexbox2">
+	<!--Botão voltar ao topo-->
+	<a href="#voltaraotopo"><img src="seta.png" width="55" height="65"/></a>
+
+	</div>
+	</div>
+	
+  
+  <br>
+  <br>
+  <br>
+  <script src="java.js"></script>
+</body>
+
+</html>
+

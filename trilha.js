@@ -31,4 +31,5 @@ function finish() {
         stepElement.style.display = 'none';
     });
     document.getElementById('step-1').style.display = 'block';
+    window.location.href = 'trabalho_livre.html';
 }
